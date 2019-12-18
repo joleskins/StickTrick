@@ -1028,4 +1028,37 @@ function NPSWindow()
 	}
 	setmetatable(t, t)
 	return t
+
+end
+
+function NoGlow()
+	local t = {
+		Name = "NoGlow",
+		LayoutType = "ShowAllInRow",
+		SelectType = "SelectOne",
+		OneChoiceForAllPlayers = true,
+		ExportOnChange = true,
+		Choices = {THEME:GetString("OptionTitles", "Off"), THEME:GetString("OptionTitles", "On")},
+		LoadSelections = function(self, list, pn)
+			local pref = themeConfig:get_data().global.NoGlow
+			if pref then
+				list[2] = true
+			else
+				list[1] = true
+			end
+		end,
+		SaveSelections = function(self, list, pn)
+			local value
+			if list[1] then
+				value = false
+			else
+				value = true
+			end
+			themeConfig:get_data().global.NoGlow = value
+			themeConfig:set_dirty()
+			themeConfig:save()
+		end
+	}
+	setmetatable(t, t)
+	return t
 end

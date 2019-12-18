@@ -1,0 +1,21 @@
+Result screen elements to include
+
+Song title (+rate if not 100%)
+
+Banner
+
+Percentage
+
+Score / Stars (eventually)
+
+Change in % and score (if pb)
+
+Chart rating(from custom system)
+
+Difficulty
+
+Game (rb pro, gh, rb)
+
+Profile name
+
+Backdrop/background

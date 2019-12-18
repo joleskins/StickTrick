@@ -1,0 +1,18 @@
+Song select elements to include
+
+"MUSIC LIBRARY" title
+Sort mode(click to cycle)
+
+Banner    Title    Artist   Difficulty   Score(grade only, grade+% on hover)
+
+Search(bar w/ "Press 4 to search"
+
+Scores(tab w/ more stats)
+
+Avatar  Profile name   Network status
+
+Difficulty rating(maybe?)
+
+Rate(maybe hide on 1.0)   BPM   Song length
+
+Chart preview somehow

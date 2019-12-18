@@ -9,9 +9,10 @@ local defaultConfig = {
 		RateSort = true,
 		HelpMenu = false,
 		ScoreBoardNag = false,
-		MeasureLines = false,
+		MeasureLines = true,
 		ProgressBar = 1, -- 0 = bottom, 1 = top
-		ShowVisualizer = true
+		ShowVisualizer = true,
+		NoGlow = true
 	},
 	NPSDisplay = {
 		DynamicWindow = false,

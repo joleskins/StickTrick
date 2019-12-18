@@ -2,6 +2,7 @@ if IsSMOnlineLoggedIn() then
 	CloseConnection()
 end
 
+
 local function input(event) -- for update button
 	if event.type ~= "InputEventType_Release" then
 		if event.DeviceInput.button == "DeviceButton_left mouse button" then
@@ -133,6 +134,13 @@ t[#t + 1] =
 			end
 		end
 	}
+
+t[#t + 1] =
+	Def.ActorFrame {
+	OnCommand = function(self)
+		PREFSMAN:SetPreference("NoGlow", 1)
+	end
+}
 
 function mysplit(inputstr, sep)
 	if sep == nil then

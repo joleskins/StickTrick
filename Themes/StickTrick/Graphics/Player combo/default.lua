@@ -114,7 +114,9 @@ local t =
 }
 
 if enabledCombo then
-	return t
+    return t
+else
+    return Def.ActorFrame {}
 end
 
 return {}
