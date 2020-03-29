@@ -138,6 +138,15 @@ if sButton == "Center" or (rButton == 1 and string.find(GAMESTATE:GetCurrentStyl
 			InitCommand=function(self)
 				self:diffuse(color("0,0,0,0.4")):diffusealpha(0):scaletoclipped(rBack[rButton][2],4000):fadetop(0)
 			end;
+			OnCommand=function(self)
+			local nf = SCREENMAN:GetTopScreen():GetChild("PlayerP1"):GetChild("NoteField")
+			local nfBoard = nf:GetChild("Board")
+			local p1 = SCREENMAN:GetTopScreen():GetChild("PlayerP1")
+        		GAMESTATE:ApplyStageModifiers("PlayerP1","Reverse")
+       			GAMESTATE:ApplyStageModifiers("PlayerP1","Sudden")
+        		GAMESTATE:ApplyStageModifiers("PlayerP1","850% SuddenOffset")
+        		GAMESTATE:ApplyStageModifiers("PlayerP1","250% Hallway")
+    		end;
 		};
 	};
 else
@@ -145,6 +154,15 @@ else
 		InitCommand=function(self)
 			self:sleep(0.1):queuecommand("Reset")
 		end;
+		OnCommand=function(self)
+			local nf = SCREENMAN:GetTopScreen():GetChild("PlayerP1"):GetChild("NoteField")
+			local nfBoard = nf:GetChild("Board")
+			local p1 = SCREENMAN:GetTopScreen():GetChild("PlayerP1")
+        		GAMESTATE:ApplyStageModifiers("PlayerP1","Reverse")
+       			GAMESTATE:ApplyStageModifiers("PlayerP1","Sudden")
+        		GAMESTATE:ApplyStageModifiers("PlayerP1","850% SuddenOffset")
+        		GAMESTATE:ApplyStageModifiers("PlayerP1","250% Hallway")
+    		end;
 		ResetCommand=function(self)
 			rButton = 0;
 		end;
@@ -174,7 +192,11 @@ else
 				Materials=NOTESKIN:GetPath("","Tex/_Receptor "..Colour[sButton]);
 				Bones=NOTESKIN:GetPath("","Tex/_Receptor "..Colour[sButton]);
 				PressCommand=function(self)
-					self:stoptweening():bounceend(0.05):y(-6):bounceend(0.05):y(0)
+					--self:stoptweening():bounceend(0.05):y(-6):bounceend(0.05):y(0)
+					self:stoptweening():spring(0.05):y(-10):spring(0.15):y(0)
+				end,
+				InitCommand=function(self)
+					self:SetTextureFiltering(false)
 				end;
 			};
 		};
@@ -244,58 +266,6 @@ else
 				
 			};
 
-			t[#t+1] = Def.ActorFrame{
-			Def.Sprite {
-				Name="POP";
-				Texture="_POP";
-				Frame0000=0;
-				Delay0000=.016;
-				Frame0001=1;
-				Delay0001=.016;
-				Frame0002=2;
-				Delay0002=.016;
-				Frame0003=3;
-				Delay0003=.016;
-				Frame0004=4;
-				Delay0004=.016;
-				Frame0005=5;
-				Delay0005=.016;
-				Frame0006=6;
-				Delay0006=.016;
-				Frame0007=7;
-				Delay0007=.016;
-				Frame0008=8;
-				Delay0008=.016;
-				Frame0009=9;
-				Delay0009=.016;
-				InitCommand=function(self)
-					self:diffuse(color(Colour2[sButton])):diffusealpha(0):zoom(1)
-				end;
-				OnCommand=function(self)
-					self:rotationx(90):z(Position[sButton][2])
-				end;
-				W1Command=function(self)
-					self:queuecommand("Move")
-				end;
-				W2Command=function(self)
-					self:queuecommand("Move")
-				end;
-				W3Command=function(self)
-					self:queuecommand("Move")
-				end;
-				W4Command=function(self)
-					self:queuecommand("Move")
-				end;
-				W5Command=function(self)
-					self:queuecommand("Move")
-				end;
-				MoveCommand=function(self)
-					if play == i2 then
-						self:finishtweening():diffusealpha(1):setstate(0):blend('BlendMode_Add'):linear(.128):linear(.032):diffusealpha(0)
-					end;
-				end;
-				};
-			};
 			--[[t[#t+1] = LoadActor (NOTESKIN:GetPath( "_Hold", "Explosion Part" ))..{
 				Name="Particle2";
 				InitCommand=function(self)
@@ -413,6 +383,66 @@ else
 					end;
 				end;
 			};--]]
+		end;
+	end;
+end;
+
+if sButton == "Center" or (rButton == 1 and string.find(GAMESTATE:GetCurrentStyle(pn):GetStepsType() ,"Double") )then
+else
+	for i=1,2 do
+		for i2=1,15 do
+			t[#t+1] = Def.ActorFrame{
+				Def.Sprite {
+					Name="POP";
+					Texture="_POP";
+					Frame0000=0;
+					Delay0000=.016;
+					Frame0001=1;
+					Delay0001=.016;
+					Frame0002=2;
+					Delay0002=.016;
+					Frame0003=3;
+					Delay0003=.016;
+					Frame0004=4;
+					Delay0004=.016;
+					Frame0005=5;
+					Delay0005=.016;
+					Frame0006=6;
+					Delay0006=.016;
+					Frame0007=7;
+					Delay0007=.016;
+					Frame0008=8;
+					Delay0008=.016;
+					Frame0009=9;
+					Delay0009=.016;
+					InitCommand=function(self)
+						self:draworder(9999999999999999999):diffuse(color(Colour2[sButton])):diffusealpha(0):zoom(1)
+					end;
+					OnCommand=function(self)
+						self:rotationx(90):z(Position[sButton][2])
+					end;
+					W1Command=function(self)
+						self:queuecommand("Move")
+					end;
+					W2Command=function(self)
+						self:queuecommand("Move")
+					end;
+					W3Command=function(self)
+						self:queuecommand("Move")
+					end;
+					W4Command=function(self)
+						self:queuecommand("Move")
+					end;
+					W5Command=function(self)
+						self:queuecommand("Move")
+					end;
+					MoveCommand=function(self)
+						if play == i2 then
+							self:finishtweening():diffusealpha(1):setstate(0):blend('BlendMode_Add'):linear(.128):linear(.032):diffusealpha(0)
+						end;
+					end;
+					};
+				};
 		end;
 	end;
 end;

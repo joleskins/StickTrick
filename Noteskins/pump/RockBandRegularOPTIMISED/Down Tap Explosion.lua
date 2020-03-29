@@ -71,10 +71,86 @@ if sButton == "Center" or (eButton == 2 and string.find(GAMESTATE:GetCurrentStyl
 			self:z(0):zoomx(1):diffusealpha(1):zoomy(1):linear(0.1):addz(10):zoomy(1.5):zoomx(1.1):diffusealpha(0)
 		end;--]]
 		
+		--[[LoadActor("KickGlow")..{
+					Frame0000=0;
+					Delay0000=.00833;
+					Frame0001=1;
+					Delay0001=.00833;
+					Frame0002=2;
+					Delay0002=.00833;
+					Frame0003=3;
+					Delay0003=.00833;
+					Frame0004=4;
+					Delay0004=.00833;
+					Frame0005=5;
+					Delay0005=.00833;
+					Frame0006=6;
+					Delay0006=.00833;
+					Frame0007=7;
+					Delay0007=.00833;
+					Frame0008=8;
+					Delay0008=.00833;
+					Frame0009=9;
+					Delay0009=.00833;
+					Frame0010=10;
+					Delay0010=.00833;
+					Frame0011=11;
+					Delay0011=.00833;
+					Frame0012=12;
+					Delay0012=.00833;
+					Frame0013=13;
+					Delay0013=.00833;
+					Frame0014=14;
+					Delay0014=.00833;
+					Frame0015=15;
+					Delay0015=.00833;
+					Frame0016=16;
+					Delay0016=.00833;
+					Frame0017=17;
+					Delay0017=.00833;
+					Frame0018=18;
+					Delay0018=.00833;
+					Frame0019=19;
+					Delay0019=.00833;
+					Frame0020=20;
+					Delay0020=.00833;
+					Frame0021=21;
+					Delay0021=.00833;
+					Frame0022=22;
+					Delay0022=.00833;
+					Frame0023=23;
+					Delay0023=.00833;
+
+					InitCommand=function(self)
+						self:blend("BlendMode_Add"):z(5):addx(5):rotationx(25):zoom(1)
+					end;
+					W1Command=function(self)
+							self:playcommand("Move")
+					end;
+					W2Command=function(self)
+							self:playcommand("Move")
+					end;
+					W3Command=function(self)
+							self:playcommand("Move")
+					end;
+					W4Command=function(self)
+							self:playcommand("Move")
+					end;
+					W5Command=function(self)
+							self:playcommand("Move")
+					end;
+					MoveCommand=function(self)
+							self:setstate(0)
+							self:diffusealpha(1)
+							self:sleep(0.2)
+							self:diffusealpha(0)	
+					end;
+				};--]]
+
 		LoadActor("HOTKICKSINGLEFRAME")..{
 					Name="HottestKick";
 					InitCommand=function(self)
-						self:blend("BlendMode_Add"):z(5);
+						self:blend("BlendMode_Add"):z(5)
 					end;
 					W1Command=function(self)
 							self:playcommand("Move")
@@ -429,47 +505,55 @@ else
 			eButton = 0;
 		end;
 		Def.Sprite {
-			Texture=NOTESKIN:GetPath( "_Tap", "Explosion Inside" );
-			W1Command=function(self)
-				self:zoom(1):linear(0.1):zoom(1.5):diffusealpha(0)
-			end;
-			W2Command=function(self)
-				self:zoom(1):linear(0.1):zoom(1.5):diffusealpha(0)
-			end;
-			W3Command=function(self)
-				self:zoom(1):linear(0.1):zoom(1.5):diffusealpha(0)
-			end;
-			W4Command=function(self)
-				self:zoom(1):linear(0.1):zoom(1.5):diffusealpha(0)
-			end;
-			W5Command=function(self)
-				self:zoom(1):linear(0.1):zoom(1.5):diffusealpha(0)
-			end;
-			HoldingOnCommand=function(self)
-				self:zoom(1)
-			end;
-			HoldingOffCommand=function(self)
-				self:diffusealpha(0)
-			end
-		};
-		Def.Sprite {
-			Texture=NOTESKIN:GetPath( "_Tap", "Explosion Outside" );
-			W1Command=function(self)
-				self:zoom(1):linear(0.1):zoom(1.5):diffusealpha(0)
-			end;
-			W2Command=function(self)
-				self:zoom(1):linear(0.1):zoom(1.5):diffusealpha(0)
-			end;
-			W3Command=function(self)
-				self:zoom(1):linear(0.1):zoom(1.5):diffusealpha(0)
-			end;
-			W4Command=function(self)
-				self:zoom(1):linear(0.1):zoom(1.5):diffusealpha(0)
-			end;
-			W5Command=function(self)
-				self:zoom(1):linear(0.1):zoom(1.5):diffusealpha(0)
-			end;
-		};
+					Name="POP";
+					Texture="_POP";
+					Frame0000=0;
+					Delay0000=.016;
+					Frame0001=1;
+					Delay0001=.016;
+					Frame0002=2;
+					Delay0002=.016;
+					Frame0003=3;
+					Delay0003=.016;
+					Frame0004=4;
+					Delay0004=.016;
+					Frame0005=5;
+					Delay0005=.016;
+					Frame0006=6;
+					Delay0006=.016;
+					Frame0007=7;
+					Delay0007=.016;
+					Frame0008=8;
+					Delay0008=.016;
+					Frame0009=9;
+					Delay0009=.016;
+					InitCommand=function(self)
+						self:draworder(9999999999999999999):diffuse(color(Colour2[sButton])):diffusealpha(0):zoom(1)
+					end;
+					OnCommand=function(self)
+						self:rotationx(60):z(Position[sButton][2])
+					end;
+					W1Command=function(self)
+						self:queuecommand("Move")
+					end;
+					W2Command=function(self)
+						self:queuecommand("Move")
+					end;
+					W3Command=function(self)
+						self:queuecommand("Move")
+					end;
+					W4Command=function(self)
+						self:queuecommand("Move")
+					end;
+					W5Command=function(self)
+						self:queuecommand("Move")
+					end;
+					MoveCommand=function(self)
+						if play == i2 then
+							self:rotationx(60):finishtweening():diffusealpha(1):setstate(0):blend('BlendMode_Add'):linear(.128):linear(.032):diffusealpha(0)
+						end;
+					end;
+					};
 	};
 end;
 

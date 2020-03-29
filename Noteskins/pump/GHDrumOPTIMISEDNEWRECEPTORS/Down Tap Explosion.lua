@@ -98,7 +98,7 @@ if sButton == "Center" or (eButton == 2 and string.find(GAMESTATE:GetCurrentStyl
 								self:zoomy(1);
 								self:zoom(1,1);
 								self:linear(0.032);
-								self:diffusealpha(0);
+								self:diffusealpha(1);
 								self:linear(0.096);
 								self:addz(-10);
 								self:zoomy(.4);
@@ -428,6 +428,57 @@ else
 		ResetCommand=function(self)
 			eButton = 0;
 		end;
+			Def.Sprite {
+				Name="POP";
+				Texture="_POP";
+				Frame0000=0;
+				Delay0000=.016;
+				Frame0001=1;
+				Delay0001=.016;
+				Frame0002=2;
+				Delay0002=.016;
+				Frame0003=3;
+				Delay0003=.016;
+				Frame0004=4;
+				Delay0004=.016;
+				Frame0005=5;
+				Delay0005=.016;
+				InitCommand=function(self)
+					self:diffuse(color("#eb6523")):diffusealpha(0):zoom(1.2):zoomy(1.5):draworder(99999999999999999999999999999999)
+					--old color eb6523
+				end;
+				OnCommand=function(self)
+					self:rotationx(60):z(Position[sButton][2])
+				end;
+				W1Command=function(self)
+					self:queuecommand("Move")
+				end;
+				W2Command=function(self)
+					self:queuecommand("Move")
+				end;
+				W3Command=function(self)
+					self:queuecommand("Move")
+				end;
+				W4Command=function(self)
+					self:queuecommand("Move")
+				end;
+				W5Command=function(self)
+					self:queuecommand("Move")
+				end;
+				MoveCommand=function(self)
+					if play == i2 then
+						self:rotationx(60):stoptweening():setstate(0):diffusealpha(1):blend('BlendMode_Add'):linear(.095):linear(.001):diffusealpha(0)
+					end;
+				end;
+				};
+			};
+	--[[t = Def.ActorFrame {
+		InitCommand=function(self)
+			self:y(position[sButton][2]):queuecommand("Reset")
+		end;
+		ResetCommand=function(self)
+			eButton = 0;
+		end;
 		Def.Sprite {
 			Texture=NOTESKIN:GetPath( "_Tap", "Explosion Inside" );
 			W1Command=function(self)
@@ -470,7 +521,7 @@ else
 				self:zoom(1):linear(0.1):zoom(1.5):diffusealpha(0)
 			end;
 		};
-	};
+	};--]]
 end;
 
 for i=1,10 do

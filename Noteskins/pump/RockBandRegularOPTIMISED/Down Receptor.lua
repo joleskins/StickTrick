@@ -438,7 +438,7 @@ else
 					end;
 					MoveCommand=function(self)
 						if play == i2 then
-							self:finishtweening():diffusealpha(1):setstate(0):blend('BlendMode_Add'):linear(.128):linear(.032):diffusealpha(0)
+							self:finishtweening():diffusealpha(0):setstate(0):blend('BlendMode_Add'):linear(.128):linear(.032):diffusealpha(0)
 						end;
 					end;
 					};

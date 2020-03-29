@@ -1,7 +1,6 @@
 local sButton = Var "Button";
 local sPlayer = Var "Player";
 
-
 local CustomRotation = {
 	--dance
 	Up = {2.5,0},
@@ -135,6 +134,15 @@ local t = Def.ActorFrame {};
 if sButton == "Center" or (rButton == 1 and string.find(GAMESTATE:GetCurrentStyle(pn):GetStepsType() ,"Double") )then
 	t = Def.ActorFrame {
 		Def.Quad {
+			OnCommand=function(self)
+			local nf = SCREENMAN:GetTopScreen():GetChild("PlayerP1"):GetChild("NoteField")
+			local nfBoard = nf:GetChild("Board")
+			local p1 = SCREENMAN:GetTopScreen():GetChild("PlayerP1")
+        		GAMESTATE:ApplyStageModifiers("PlayerP1","Reverse")
+       			GAMESTATE:ApplyStageModifiers("PlayerP1","Sudden")
+        		GAMESTATE:ApplyStageModifiers("PlayerP1","SuddenOffset")
+        		GAMESTATE:ApplyStageModifiers("PlayerP1","250% Hallway")
+    		end;
 			InitCommand=function(self)
 				self:diffuse(color("0,0,0,0.4")):diffusealpha(0):scaletoclipped(rBack[rButton][2],4000):fadetop(0)
 			end;
@@ -142,9 +150,19 @@ if sButton == "Center" or (rButton == 1 and string.find(GAMESTATE:GetCurrentStyl
 	};
 else
 	t = Def.ActorFrame {
+
 		InitCommand=function(self)
 			self:sleep(0.1):queuecommand("Reset")
 		end;
+		OnCommand=function(self)
+			local nf = SCREENMAN:GetTopScreen():GetChild("PlayerP1"):GetChild("NoteField")
+			local nfBoard = nf:GetChild("Board")
+			local p1 = SCREENMAN:GetTopScreen():GetChild("PlayerP1")
+        		GAMESTATE:ApplyStageModifiers("PlayerP1","Reverse")
+       			GAMESTATE:ApplyStageModifiers("PlayerP1","Sudden")
+        		GAMESTATE:ApplyStageModifiers("PlayerP1","850% SuddenOffset")
+        		GAMESTATE:ApplyStageModifiers("PlayerP1","250% Hallway")
+    		end;
 		ResetCommand=function(self)
 			rButton = 0;
 		end;
