@@ -16,6 +16,8 @@ Preferably the scoring systems from either of the two games would be supported b
 
 Make sure to **select PUMP gamemode** (Main menu -> options -> select game -> pump)
 
+Set key binds for your controller (Main menu -> options -> config key/joy mappings)
+
 Download songs from the link provided in readme.txt
 
 Make sure to **use the provided theme**. It looks very much like the Etterna default theme on the surface, but there are internal changes which tunes the theme specifically for playing drums instead of keyboard
