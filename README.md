@@ -10,9 +10,9 @@ Preferably the scoring systems from either of the two games would be supported b
 
 # HOW TO PLAY
 
-**MAKE SURE YOU ARE USING ETTERNA VERSION .66.1** BECAUSE THERE IS NO GUARANTEE IT WILL WORK ON ANY OTHER VERSIONS. YOU CAN DOWNLOAD VERSION .66.1 HERE IF YOU DON'T HAVE IT
-64-bit: https://github.com/etternagame/etterna/releases/download/v0.66.1/Etterna-0.66.1-x64.exe
-32-bit: https://github.com/etternagame/etterna/releases/download/v0.66.1/Etterna-0.66.1-i386.exe
+**MAKE SURE YOU ARE USING ETTERNA VERSION .66.1** BECAUSE THERE IS NO GUARANTEE IT WILL WORK ON ANY OTHER VERSIONS. YOU CAN DOWNLOAD VERSION .66.1 HERE IF YOU DON'T HAVE IT<br/>
+64-bit: https://github.com/etternagame/etterna/releases/download/v0.66.1/Etterna-0.66.1-x64.exe<br/>
+32-bit: https://github.com/etternagame/etterna/releases/download/v0.66.1/Etterna-0.66.1-i386.exe<br/>
 
 Make sure to **select PUMP gamemode** (Main menu -> options -> select game -> pump)
 
