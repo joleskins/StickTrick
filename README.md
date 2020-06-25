@@ -1,5 +1,5 @@
 # StickTrick
-Let me first clarify that this is in absolutely no way close to complete. That said, it is kind of playable once you're past the initial setup. Since this is in a very early stage and I've had minimal external testing, I'd love if you could report issues that you find. There's a big chance I might not have noticed issues, or they might not even happen on my end
+Let me first clarify that this is in absolutely no way close to complete. That said, it is kind of playable once you're past the initial setup. Since this is in a very early stage and I've had minimal external testing, I'd love if you could report issues that you find
 
 Rock Band drums environment for Etterna. **So far only pump it up mode is fully supported (4 heads and kick)**
 
