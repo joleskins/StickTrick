@@ -16,10 +16,14 @@ Preferably the scoring systems from either of the two games would be supported b
 
 Make sure to **select PUMP gamemode** (Main menu -> options -> select game -> pump)
 
-Set key binds for your controller (Main menu -> options -> config key/joy mappings)
+**Set key binds** for your controller (Main menu -> options -> config key/joy mappings)
 
 Download songs from the link provided in **songs.txt**
 
-Make sure to **use the provided theme**. It looks very much like the Etterna default theme on the surface, but there are internal changes which tunes the theme specifically for playing drums instead of keyboard
+Put the StickTrick theme in the theme folder ( `Etterna\Themes` )
+
+Put the noteskins in the pump noteskins folder ( `Etterna\Noteskins\pump` )
+
+Make sure to **use the provided theme** (Main menu -> options -> display options -> appearance options). It looks very much like the Etterna default theme on the surface, but there are internal changes which tune the theme specifically for playing drums instead of keyboard
 
 The provided noteskin(s) force an aggressive hallway perspective, meaning that scroll speed will feel vastly slower than normal. You can approximately **use 2.5x your normal cmod** to achieve the same perceived speed (e.g. c800 -> c2000). This has not been double checked with math or anything, it's simply a rough approximation
