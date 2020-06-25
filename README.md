@@ -1,7 +1,7 @@
 # StickTrick
 Let me first clarify that this is in absolutely no way close to complete. That said, it is kind of playable once you're past the initial setup
 
-Rock Band drums environment for Etterna. **So far only pump it up mode is supported fully (4 heads and kick)**
+Rock Band drums environment for Etterna. **So far only pump it up mode is fully supported (4 heads and kick)**
 
 The plan is to support regular Rock Band, Rock Band Pro, and Guitar Hero modes by utilising pump, doubles, and solo Stepmania files. Of course the three modes will have noteskin variances tailored to each one. Pro mode will include hats, GH will look like GH. You get the point.
 
