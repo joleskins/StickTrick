@@ -22,7 +22,7 @@ Download songs from the link provided in **songs.txt**
 
 Put the StickTrick theme in the theme folder ( `Etterna\Themes` )
 
-Put the noteskins in the pump noteskins folder ( `Etterna\Noteskins\pump` )
+Put the noteskin(s) in the pump noteskins folder ( `Etterna\Noteskins\pump` )
 
 Make sure to **use the provided theme** (Main menu -> options -> display options -> appearance options). It looks very much like the Etterna default theme on the surface, but there are internal changes which tune the theme specifically for playing drums instead of keyboard
 
