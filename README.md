@@ -14,15 +14,15 @@ Preferably the scoring systems from either of the two games would be supported b
 64-bit: https://github.com/etternagame/etterna/releases/download/v0.66.1/Etterna-0.66.1-x64.exe<br/>
 32-bit: https://github.com/etternagame/etterna/releases/download/v0.66.1/Etterna-0.66.1-i386.exe<br/>
 
-Make sure to **select PUMP gamemode** (Main menu -> options -> select game -> pump)
-
-**Set key binds** for your controller (Main menu -> options -> config key/joy mappings)
-
 Download songs from the link provided in **songs.txt**
 
 Put the StickTrick theme in the theme folder ( `Etterna\Themes` )
 
 Put the noteskin(s) in the pump noteskins folder ( `Etterna\Noteskins\pump` )
+
+Make sure to **select PUMP gamemode** (Main menu -> options -> select game -> pump)
+
+**Set key binds** for your controller (Main menu -> options -> config key/joy mappings)
 
 Make sure to **use the provided theme** (Main menu -> options -> display options -> appearance options). It looks very much like the Etterna default theme on the surface, but there are internal changes which tune the theme specifically for playing drums instead of keyboard
 
