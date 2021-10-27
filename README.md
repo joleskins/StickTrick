@@ -1,5 +1,9 @@
 # StickTrick
-Let me first clarify that this is in absolutely no way close to complete. That said, it is kind of playable once you're past the initial setup. Since this is in a very early stage and I've had minimal external testing, I'd love if you could report issues that you find
+----------------------------------------------------------------------------------------------------------------
+**This project has been abandoned because Clone Hero drum support rendered StickTrick an obsolete novelty**
+----------------------------------------------------------------------------------------------------------------
+
+This is a decently playable drum (4-lane + kick) environment for Etterna. If you're already familiar with Etterna, the setup should be simple enough. Since this is in a very early stage and I've had minimal external testing, expect some things to be odd
 
 Rock Band drums environment for Etterna. **So far only pump it up mode is fully supported (4 heads and kick)**
 
