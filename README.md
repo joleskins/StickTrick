@@ -32,4 +32,4 @@ Make sure to **use the provided theme** (Main menu -> options -> display options
 
 The provided noteskin(s) force an aggressive hallway perspective, meaning that scroll speed will feel vastly slower than normal. You can approximately **use 2.5x your normal cmod** to achieve the same perceived speed (e.g. c800 -> c2000). This has not been double checked with math or anything, it's simply a rough approximation
 
-Not required, but anti aliasing can be forced on via your graphics card's driver software. The game has no anti aliasing on the 3d objects in gameplay, so forcing it on can spare your eyes just a bit
+Not required, but anti aliasing can be forced on via your graphics card's driver software. The game doesn't have good anti aliasing on the 3d objects in gameplay, so forcing it on can spare your eyes just a bit
